@@ -1,0 +1,443 @@
+/* Importar fuentes de Google Fonts para una mejor tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap');
+
+/* --- Globales y Reseteo --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente principal más moderna */
+    min-height: 100vh;
+    /* CAMBIO PRINCIPAL: Gradiente naranja */
+    background: linear-gradient(135deg, #ff8c00 0%, #ff6347 100%); /* Naranja oscuro a naranja rojizo */
+    color: #3f4a54; /* Gris oscuro suave para el texto */
+    transition: background 0.8s ease-in-out; /* Transición más notoria para el fondo */
+    padding: 30px; /* Más padding para mayor espacio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Íconos SVG --- */
+.icon {
+    width: 1.3em; /* Un poco más grandes */
+    height: 1.3em;
+    vertical-align: middle;
+    margin-right: 8px; /* Más espacio a la derecha */
+    transition: transform 0.2s ease; /* Pequeña transición para interacciones */
+}
+
+/* --- Contenedor Principal --- */
+.container {
+    max-width: 900px;
+    width: 95%; /* Asegura que no se desborde en pantallas pequeñas */
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.98); /* Fondo más opaco y vibrante */
+    backdrop-filter: blur(15px); /* Desenfoque más intenso */
+    border-radius: 25px; /* Bordes más redondeados */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15); /* Sombra más definida */
+    padding: 50px; /* Más padding para aire */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil para el efecto de "cristal" */
+}
+
+.container:hover {
+    transform: translateY(-8px); /* Elevación más pronunciada */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2); /* Sombra más grande en hover */
+}
+
+/* --- Títulos --- */
+h1 {
+    font-family: 'Montserrat', sans-serif; /* Fuente de título diferente */
+    text-align: center;
+    font-size: 2.8rem; /* Más grande */
+    margin-bottom: 25px;
+    /* CAMBIO: Gradiente de texto naranja */
+    background: linear-gradient(45deg, #ff8c00, #ff6347);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    letter-spacing: -0.5px; /* Ajuste de espacio entre letras */
+}
+
+h1:hover {
+    transform: scale(1.02); /* Escala más sutil */
+    /* CAMBIO: Sombra de texto naranja */
+    text-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+}
+
+h1 .icon {
+    margin-right: 10px; /* Más espacio para el ícono en el título */
+}
+
+/* --- Párrafo Descriptivo --- */
+p {
+    font-size: 1.15rem; /* Ligeramente más pequeño, más legible */
+    line-height: 1.7; /* Mayor interlineado */
+    margin-bottom: 40px; /* Más espacio debajo */
+    text-align: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    padding: 20px 25px; /* Más padding */
+    border-radius: 15px; /* Más redondeado */
+    background: rgba(255, 255, 255, 0.5); /* Fondo semitransparente para destacar */
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Borde muy sutil */
+}
+
+p:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Se vuelve más sólido en hover */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px); /* Pequeña elevación */
+}
+
+/* --- Grupos de Controles --- */
+.controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas más grandes */
+    gap: 30px; /* Más espacio entre grupos */
+    margin-bottom: 40px;
+}
+
+.control-group {
+    background: rgba(255, 255, 255, 0.85); /* Un poco más opaco */
+    padding: 30px; /* Más padding */
+    border-radius: 20px; /* Más redondeado */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* Sombra más suave y extendida */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Borde sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.control-group:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+.control-group h3 {
+    margin-bottom: 20px;
+    /* CAMBIO: Color de texto de h3 naranja más oscuro */
+    color: #cc5500; /* Un naranja quemado */
+    font-size: 1.3rem;
+    display: flex; /* Para alinear ícono y texto */
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.control-group h3 .icon {
+    /* CAMBIO: Color del ícono en h3 naranja */
+    color: #ff8c00;
+}
+
+/* --- Botones --- */
+button {
+    /* CAMBIO: Gradiente de botones naranja */
+    background: linear-gradient(45deg, #ff8c00, #ff6347);
+    color: white;
+    border: none;
+    padding: 14px 28px; /* Más padding */
+    border-radius: 30px; /* Más redondeado */
+    cursor: pointer;
+    font-size: 1.05rem; /* Ligeramente más grande */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 8px 5px; /* Más margen */
+    /* CAMBIO: Sombra de botón naranja */
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.02); /* Más elevación y pequeña escala */
+    /* CAMBIO: Sombra de botón en hover naranja */
+    box-shadow: 0 8px 25px rgba(255, 140, 0, 0.5);
+}
+
+button:active {
+    transform: translateY(0);
+    /* CAMBIO: Sombra de botón activo naranja */
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+}
+
+button:disabled {
+    background: linear-gradient(45deg, #d3d3d3, #b0b0b0); /* Grises más suaves */
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    opacity: 0.8;
+}
+
+/* --- Campo de Texto (Input) --- */
+input[type="text"] {
+    width: 100%;
+    padding: 14px 18px; /* Más padding */
+    border: 2px solid #e9eff5; /* Borde más claro */
+    border-radius: 12px; /* Más redondeado */
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    background-color: #f7f9fc; /* Fondo ligeramente azulado */
+    color: #4a5a6a; /* Color de texto más oscuro */
+}
+
+input[type="text"]::placeholder {
+    color: #9ab3c6; /* Color de placeholder */
+}
+
+input[type="text"]:focus {
+    outline: none;
+    /* CAMBIO: Borde de foco naranja */
+    border-color: #ff8c00;
+    /* CAMBIO: Sombra de foco naranja */
+    box-shadow: 0 0 0 4px rgba(255, 140, 0, 0.2);
+    background-color: #ffffff; /* Fondo blanco en foco */
+}
+
+/* --- Mensajes --- */
+.message {
+    /* CAMBIO: Fondo y borde de mensaje naranja */
+    background: rgba(255, 140, 0, 0.1);
+    border-left: 5px solid #ff8c00;
+    padding: 18px;
+    margin: 20px 0; /* Más margen */
+    border-radius: 8px; /* Ligeramente más redondeado */
+    font-weight: 500;
+    transition: all 0.4s ease;
+    color: #4a5a6a; /* Un color de texto que contraste bien */
+    line-height: 1.5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+}
+
+.hidden-message {
+    /* CAMBIO: Fondo y borde de hidden-message naranja */
+    background: rgba(255, 99, 71, 0.15); /* Usar el segundo color del gradiente principal */
+    border-left: 5px solid #ff6347;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 15px; /* Más redondeado */
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    animation: slideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* CAMBIO: Color de texto de hidden-message naranja más oscuro */
+    color: #cc5500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Reloj --- */
+.clock {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    text-align: center;
+    /* CAMBIO: Color del texto del reloj (si no tiene gradiente) */
+    color: #cc5500;
+    font-weight: bold;
+    margin: 30px 0;
+    padding: 25px;
+    border: 3px solid #e0e9f5;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.clock span {
+    /* CAMBIO: Gradiente de texto del reloj naranja */
+    background: linear-gradient(45deg, #ff8c00, #ff6347);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.clock .icon {
+    animation: spin 3s linear infinite;
+    /* CAMBIO: Color del ícono del reloj naranja */
+    color: #ff8c00;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* --- Mensaje de Bienvenida --- */
+.welcome-message {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    /* CAMBIO: Gradiente del mensaje de bienvenida (si quieres que sea verde, déjalo así, o cambia a naranja) */
+    background: linear-gradient(45deg, #28a745, #5cb85c); /* Mantiene el verde de éxito si lo prefieres */
+    /* Si quieres el welcome-message naranja también:
+    background: linear-gradient(45deg, #ff8c00, #ffa500); */
+    color: white;
+    padding: 18px 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+    /* Si cambiaste el background a naranja:
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4); */
+    animation: welcomeSlide 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 1000;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.welcome-message .icon {
+    animation: bounceIn 0.8s ease-out;
+}
+
+@keyframes welcomeSlide {
+    from {
+        transform: translateX(120%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+/* --- Contador de Clics --- */
+.click-counter {
+    /* CAMBIO: Fondo y borde de click-counter a tonos de amarillo/naranja */
+    background: rgba(255, 206, 84, 0.2);
+    border: 2px solid #ffbe4d;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    margin: 15px 0;
+    color: #8c6d1d;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Animaciones Reutilizables --- */
+.pulse {
+    animation: pulse 0.6s ease;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.glow {
+    /* CAMBIO: Sombra de brillo naranja */
+    box-shadow: 0 0 25px rgba(255, 140, 0, 0.7);
+}
+
+/* --- Responsive Design (Ajustes para pantallas pequeñas) --- */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 30px;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .controls {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .control-group {
+        padding: 25px;
+        border-radius: 15px;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .clock {
+        font-size: 1.8rem;
+        padding: 20px;
+    }
+
+    .welcome-message {
+        top: 15px;
+        right: 15px;
+        padding: 12px 18px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .clock {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+}

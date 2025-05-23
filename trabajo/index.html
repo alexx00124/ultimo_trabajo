@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos Interactivos - JavaScript</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="titulo">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+          <path d="m9 11 3 3L22 4" />
+        </svg>
+        Eventos Interactivos con JavaScript
+      </h1>
+
+      <p id="parrafo">
+        Explora las diferentes interacciones disponibles en esta página. Cada
+        elemento responde de manera única a tus acciones.
+      </p>
+
+      <div class="controls">
+        <div class="control-group">
+          <h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M18.37 2.63a2.42 2.42 0 0 0-3.44 0L2 15.56V22h6.44L21.37 8.63a2.42 2.42 0 0 0 0-3.44Z"
+              />
+              <path d="M14 2L2 14" />
+              <path d="M17.5 7.5L2 14" />
+            </svg>
+            Control de Página
+          </h3>
+          <button id="cambiarFondo">Cambiar Fondo</button>
+          <button id="cambiarTitulo">Cambiar Título</button>
+          <div id="mensajeTitulo" class="message" style="display: none"></div>
+        </div>
+
+        <div class="control-group">
+          <h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
+              <path d="m15 5 4 4" />
+            </svg>
+            Campo de Texto
+          </h3>
+          <input
+            type="text"
+            id="campoTexto"
+            placeholder="Escribe algo aquí..."
+          />
+          <div id="mensajeTexto" class="message"></div>
+        </div>
+
+        <div class="control-group">
+          <h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            Función Modular
+          </h3>
+          <button id="botonModular">Mensaje Personalizado</button>
+          <div id="contadorClics" class="click-counter">Clics restantes: 5</div>
+          <div
+            id="mensajePersonalizado"
+            class="message"
+            style="display: none"
+          ></div>
+        </div>
+      </div>
+
+      <div class="clock" id="reloj">
+        <span>--:--:--</span>
+      </div>
+
+      <div id="mensajeOculto" style="display: none"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
